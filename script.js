@@ -40,7 +40,9 @@ class MagicBall {
         //creating an instance for the image tag
         this.src = `./magic/magic8ball_${this.index}.png`
         //setting the source to the path of all the magic 8 ball image files and grabbing each by their index 
+        this.fadeTimeOut = null;
     }
+
     initialize() {
         this.element.appendChild(this.img);
         this.img.setAttribute("id", this.id);
@@ -64,7 +66,7 @@ class MagicBall {
     //decided to keep all style in css file 
 }
 
-let arr = [];
+let imageArr = [];
 //empty array
 
 let startBall = new MagicBall(magicball, "start");
@@ -75,15 +77,21 @@ startBall.initialize();
 for (let i = 1; i <= 20; i++) {
     let _src = `./magic/magic8ball_${i}.png`
     //iterating through the image folder and setting the source to the random file aka i in this loop 
-    arr.push(_src);
+    imageArr.push(_src);
     //pushing the files to the array 
 }
 
 form.addEventListener("submit", (event) => {
+    if (startBall.fadeTimeOut != null) {
+        //if the value of fadeTimeOut is not null
+        clearTimeout(startBall.fadeTimeOut)
+        //clear the timer 
+        //clearing last one that was set
+    }
     // Form submission event to happen when user asks question 
     event.preventDefault();
     //cancels the event if it is cancelable - default action of event will not happen
-    startBall.src = arr[randomNumber(1, 20)];
+    startBall.src = imageArr[randomNumber(1, 20)];
     //setting the source of the magic 8 ball object to a random source from the array 
     //this will help to generate the random photo/answer to user question 
     startBall.imageChange();
@@ -94,5 +102,12 @@ form.addEventListener("submit", (event) => {
     form.reset();
     //resetting the ask question input placeholder 
     //once ask button clicked, the input feild returns to it's inital place holder 
+    startBall.fadeTimeOut = setTimeout(fader, 3000);
+    //storing the id of the timeout in fadeTimeOut
+    
 });
 
+function fader() {
+    startBall.src = `./magic/magic8ball_start.png`;
+    startBall.imageChange();
+}
