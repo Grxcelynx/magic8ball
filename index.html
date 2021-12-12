@@ -3,22 +3,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>hi</h1>
-    <form>
-        <div>
+    <div class="testball"></div>
+
+    <div class="magic8ball">
+        <img id="magic8ballimg" src="./magic/magic8ball_start.png" alt="">
+    </div>
+
+    <form id="magic">
+        <!-- <h1>Magic 8Ball</h1> -->
+        <div id="ask-question">
             <label>Ask me anything!</label>
-            <input type="question" id="question" value="" placeholder="Your question here">
+            <br>
+            <input type="question" id="user-question" value="" placeholder="Type here">
         </div>
         <button type="submit" id="ask" value="">Ask</button>
     </form>
 
-    <div id="answers">
 
-    </div>
-
+    <script src="./script.js"></script>
 
 </body>
 </html>
+

@@ -1,0 +1,69 @@
+#magic {
+    color: white;
+    text-align: center;
+    /* align-items: center;
+    justify-content: center; */
+    position: relative;
+    top: 70%;
+
+}
+
+.magic8ball {
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.magic8ball img {
+    height: 40%;
+    width: auto;
+    position: relative;
+}
+
+#user-question {
+    
+    /* opacity: 0.3; */
+    border-color: black;
+    background-image: linear-gradient(to right, black , white, black);
+    text-align: center;
+
+
+
+}
+
+body {
+    /* background-image: url("https://th.bing.com/th/id/R.223bc5d1b604cd7898bc6e9e96f0880a?rik=Z2MDyChj4d%2bP8Q&riu=http%3a%2f%2f25.media.tumblr.com%2f223bc5d1b604cd7898bc6e9e96f0880a%2ftumblr_msqj8czLcY1rpa5h0o1_500.gif&ehk=kkwQZx4CPYhKoV6%2fdkVdHOFcQNj8GiOm9EIsLQ6uGXI%3d&risl=&pid=ImgRaw&r=0"); */
+    background-image: url("https://68.media.tumblr.com/2b1471e7ebdd45ccd2fe183de564992f/tumblr_nctb3g3AbR1rquqsdo1_500.gif");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+html {
+    height: 100vh;
+}
+
+#ask {
+    border-radius: 50%;
+    transition-duration: 0.4s;
+    height: 10%;
+    width: 10%;
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+#ask:hover {
+    /* background-color: #4CAF50; Green */
+    background-image: radial-gradient(red 5%, purple 15%, black 60%);
+    color: white;
+}
+/* images to use later maybe 
+https://media1.tenor.com/images/8ae578095ed5985a18c69bc5022de10b/tenor.gif?itemid=13903228 */
+/* https://68.media.tumblr.com/2b1471e7ebdd45ccd2fe183de564992f/tumblr_nctb3g3AbR1rquqsdo1_500.gif */
+/* https://www.bing.com/images/search?view=detailV2&ccid=PYnvBCd4&id=1E2F74808D272E9AF368C38F0CE1B3912874C974&thid=OIP.PYnvBCd4u7EQMU16oVd2UwHaFj&mediaurl=https%3a%2f%2fmedia1.tenor.com%2fimages%2f3d89ef042778bbb110314d7aa1577653%2ftenor.gif%3fitemid%3d15453879&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.3d89ef042778bbb110314d7aa1577653%3frik%3ddMl0KJGz4QyPww%26pid%3dImgRaw%26r%3d0&exph=373&expw=498&q=swirl+gif+HD&simid=608034667698611796&FORM=IRPRST&ck=F5C42A5328F29E3E71EF0FA2D18F04DD&selectedIndex=16 */
