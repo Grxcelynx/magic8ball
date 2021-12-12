@@ -47,16 +47,15 @@ html {
 #theball {
     align-items: center;
     position:absolute;
-    top: 35%;
+    top: 30%;
+    left: 50%;
+    margin: 0%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
     height: 40%;
     width: auto;
     display: block;
     justify-content: center;
-    margin-left: 37%;
-    margin-right: auto;
-
-    
-
 }
 #theball img {
     height: 100%;
