@@ -1,42 +1,11 @@
-#magic {
-    color: white;
-    text-align: center;
-    /* align-items: center;
-    justify-content: center; */
-    position: relative;
-    top: 70%;
-
-}
-
-.magic8ball {
-    align-items: center;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-}
-.magic8ball img {
-    height: 40%;
-    width: auto;
-    position: relative;
-}
-
-#user-question {
-    
-    /* opacity: 0.3; */
-    border-color: black;
-    background-image: linear-gradient(to right, black , white, black);
-    text-align: center;
-
-
-
-}
-
 body {
     /* background-image: url("https://th.bing.com/th/id/R.223bc5d1b604cd7898bc6e9e96f0880a?rik=Z2MDyChj4d%2bP8Q&riu=http%3a%2f%2f25.media.tumblr.com%2f223bc5d1b604cd7898bc6e9e96f0880a%2ftumblr_msqj8czLcY1rpa5h0o1_500.gif&ehk=kkwQZx4CPYhKoV6%2fdkVdHOFcQNj8GiOm9EIsLQ6uGXI%3d&risl=&pid=ImgRaw&r=0"); */
     background-image: url("https://68.media.tumblr.com/2b1471e7ebdd45ccd2fe183de564992f/tumblr_nctb3g3AbR1rquqsdo1_500.gif");
+    
+    /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Circle_and_its_center.svg/768px-Circle_and_its_center.svg.png"); */
+    /* use to check centering when having to do it by percentage or px ^ */
+
+    
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,20 +17,59 @@ html {
     height: 100vh;
 }
 
+
 #ask {
     border-radius: 50%;
-    transition-duration: 0.4s;
+    /* transition-duration: 0.4s; */
+    transition-duration: 1s;
     height: 10%;
     width: 10%;
-    background-color: black;
-    color: white;
-    border-color: black;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: radial-gradient( white , transparent, transparent);
 }
 
 #ask:hover {
     /* background-color: #4CAF50; Green */
-    background-image: radial-gradient(red 5%, purple 15%, black 60%);
+    background-image: radial-gradient(red 10%, purple 20%, transparent 50%);
     color: white;
+}
+
+#magic {
+    color: white;
+    text-align: center;
+    /* align-items: center;
+    justify-content: center; */
+    position: relative;
+    top: 70%;
+}
+
+#theball {
+    align-items: center;
+    position:absolute;
+    top: 35%;
+    height: 40%;
+    width: auto;
+    display: block;
+    justify-content: center;
+    margin-left: 37%;
+    margin-right: auto;
+
+    
+
+}
+#theball img {
+    height: 100%;
+    width: 100%;
+}
+
+#user-question {
+    
+    /* opacity: 0.3; */
+    border-color: transparent;
+    background-color: transparent;
+    background-image: linear-gradient(to right, transparent , white, transparent);
+    text-align: center;
 }
 /* images to use later maybe 
 https://media1.tenor.com/images/8ae578095ed5985a18c69bc5022de10b/tenor.gif?itemid=13903228 */

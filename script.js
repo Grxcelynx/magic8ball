@@ -1,52 +1,98 @@
-
-// function should take in an image from the magic folder and push it to the result in the HTML 
-// would want to take an approach with something like this i think? 
-
-// const magic = magic folder
-
-// function generateImage() {
-//     for every image in magic {
-//         generate am image .random 
-
-//         if  user inputs a question and clicks ask
-//     } else {
-//         alert to type a question or something 
-//     }
-
-
-// }
-
-// TODO:
-
-// make a function that takes the user input and gives back an image at random 
-        // iterate through magic folder if possible 
-
-        // maybe append the image to a container or something ??
-
-
-// put the answer into the answers div to populate answer for user 
-
-// replace user input with their answer
-
-
 const inputElement = document.getElementById("user-question");
 const form = document.getElementById("magic");
 const button = document.getElementById("user-question");
-let test = document.querySelector(".testball");
+let magicball = document.getElementById("theball");
 
 let question = '';
 
 
-form.addEventListener("submit", (event)=> {
-    event.preventDefault();
-    // question = inputElement.value - acess option 1
-    question = event.target[0].value
-    // targeting form submit event belongs to
-    // giving value of first index of form
+// form.addEventListener("submit", (event)=> {
+//     event.preventDefault();
+//     // question = inputElement.value - acess option 1
+//     question = event.target[0].value
+//     // targeting form submit event belongs to
+//     // giving value of first index of form
     
-    console.log(question)
+//     console.log(question)
+// }
+// )
+
+// previous event listener ^
+
+function randomNumber(min, max) {
+    //this function will help to produce a random photo
+    //using this function we will grab a random index to return when question is asked
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-)
 
 
+class MagicBall {
+    //Parent class 
+    constructor(_element, _index) {
+        this.element = _element;
+        this.index = _index;
+        //setting variables for paramaters 
+        this.id = "magicball" + this.index;
+        //setting id to the HTML element created from the theball DIV plus the index
+        this.img = document.createElement("img");
+        //creating an instance for the image tag
+        this.src = `./magic/magic8ball_${this.index}.png`
+        //setting the source to the path of all the magic 8 ball image files and grabbing each by their index 
+    }
+    initialize() {
+        this.element.appendChild(this.img);
+        this.img.setAttribute("id", this.id);
+        document.getElementById(this.id).src = this.src;
+        // this.style();
+    }
+    imageChange() {
+        document.getElementById(this.id).src = this.src;
+        //change the image and not append any elements 
+    }
+
+    // style() {
+    //   //JUST ADDED SOME STYLING TO FIX THE SIZE ON THE IMAGE
+    //   //NOTICE THE STYLE METHOD IS CALLED IN THE INITIAIZATION METHOD
+    //   //I THINK I AM JUST GOING TO RENAME ALL THE INITIALIZATION STUFF TO DRAW
+    //     this.img.style.height = "100%";
+    //     this.img.style.width = "100%"
+    //     this.img.style.zIndex = "1"
+    // }
+    //NOT USING STYLE FUNCTION ^^^^^
+    //decided to keep all style in css file 
+}
+
+let arr = [];
+//empty array
+
+let startBall = new MagicBall(magicball, "start");
+//setting startball to starting point aka start image file - as it's labeled magic8ball_start
+
+startBall.initialize();
+// an array of strings that will hold all sources 
+for (let i = 1; i <= 20; i++) {
+    let _src = `./magic/magic8ball_${i}.png`
+    //iterating through the image folder and setting the source to the random file aka i in this loop 
+    arr.push(_src);
+    //pushing the files to the array 
+}
+
+form.addEventListener("submit", (event) => {
+    // Form submission event to happen when user asks question 
+    event.preventDefault();
+    //cancels the event if it is cancelable - default action of event will not happen
+    startBall.src = arr[randomNumber(1, 20)];
+    //setting the source of the magic 8 ball object to a random source from the array 
+    //this will help to generate the random photo/answer to user question 
+    startBall.imageChange();
+    //calling the image change to generate a new photo on each submit 
+
+    // question.saveToSession();
+    //will use ^^^ when storage session made if time permits 
+    form.reset();
+    //resetting the ask question input placeholder 
+    //once ask button clicked, the input feild returns to it's inital place holder 
+});
 
