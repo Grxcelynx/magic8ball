@@ -1,16 +1,11 @@
-/* 
-TODO: 
-make button on the bottom
-fix spacing between label and input  */
-
-
+html {
+    height: 100vh;
+}
 
 body {
     background-image: url("https://i.pinimg.com/originals/6e/47/1a/6e471a2370d95b21fdbcff841b3613d7.gif");
     height:100%;
     background-position: center;
-    /* background-repeat:repeat-y  space; */
-    /* background-size: cover; */
     background-size: 800px, 1000px;
     background-color: black;
     background-repeat: no-repeat;
@@ -20,18 +15,24 @@ body {
 body img {
     /* -webkit-box-reflect: below; */
     /* -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4)); */
-    opacity: 0.7;
+    opacity: 0.8;
     
 }
 
-html {
-    height: 100vh;
+#prompt {
+    font-family: "Copperplate", fantasy;
+    font-size: 250%;
+    color: white;
+    text-shadow: 2px 5px grey;
+    line-height: 5;
+    text-align: center;
+    align-items: center;
+    display: block;
 }
 
 
 #ask {
     border-radius: 50%;
-    /* transition-duration: 0.4s; */
     transition-duration: 2s;
     height: 10%;
     width: 10%;
@@ -41,21 +42,24 @@ html {
 }
 
 #ask:hover {
-    /* background-color: #4CAF50; Green */
-    /* background-image: url("https://gifimage.net/wp-content/uploads/2017/10/cool-gif-backgrounds-7.gif"); */
     background-image: radial-gradient(red 10%, purple 20%, transparent 50%);
     color: white;
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
+}
+
+#user-question {  
+    border-color: transparent;
+    background-color: transparent;
+    background-image: linear-gradient(to right, transparent , white, transparent);
+    text-align: center;
 }
 
 #magic {
     color: white;
     text-align: center;
-    /* align-items: center;
-    justify-content: center; */
+    align-items: center;
+    justify-content: center;
     position: relative;
-    top: 5%;
+    top: 55%;
 }
 
 #theball {
@@ -77,24 +81,9 @@ html {
     width: 100%;
 }
 
-#user-question {
-    
-    /* opacity: 0.3; */
-    border-color: transparent;
-    background-color: transparent;
-    background-image: linear-gradient(to right, transparent , white, transparent);
-    text-align: center;
-}
 
-#prompt {
-    font-family: "Copperplate", fantasy;
-    font-size: 150%;
-    color: white;
-    text-shadow: 2px 8px grey;
-    line-height: 2;
-    top: 100%;
 
-}
+
 
 
 
