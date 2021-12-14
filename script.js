@@ -1,6 +1,6 @@
 const inputElement = document.getElementById("user-question");
 const form = document.getElementById("magic");
-const button = document.getElementById("user-question");
+// const button = document.getElementById("user-question");
 let magicball = document.getElementById("theball");
 
 let question = '';
@@ -87,7 +87,19 @@ form.addEventListener("submit", (event) => {
         clearTimeout(startBall.fadeTimeOut)
         //clear the timer 
         //clearing last one that was set
-    }
+    };
+    const regex = /\?$/;
+    const isExisting = regex.test(inputElement.value);
+    // console.log("Working -> : ",isExisting)
+    // console.log(inputElement.value)
+    if (isExisting != true) {
+        alert("Please enter a question with a ? ");
+        event.preventDefault();
+        return;
+    };
+    //checking user's input to see if it ends in a question mark
+
+    
     // Form submission event to happen when user asks question 
     event.preventDefault();
     //cancels the event if it is cancelable - default action of event will not happen
@@ -104,10 +116,15 @@ form.addEventListener("submit", (event) => {
     //once ask button clicked, the input feild returns to it's inital place holder 
     startBall.fadeTimeOut = setTimeout(fader, 3000);
     //storing the id of the timeout in fadeTimeOut
-    
+
+
 });
 
 function fader() {
     startBall.src = `./magic/magic8ball_start.png`;
     startBall.imageChange();
 }
+
+
+
+
