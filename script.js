@@ -3,9 +3,8 @@ const form = document.getElementById("magic");
 // const button = document.getElementById("user-question");
 let magicball = document.getElementById("theball");
 
-let question = '';
 
-
+// let question = '';
 // form.addEventListener("submit", (event)=> {
 //     event.preventDefault();
 //     // question = inputElement.value - acess option 1
@@ -53,17 +52,6 @@ class MagicBall {
         document.getElementById(this.id).src = this.src;
         //change the image and not append any elements 
     }
-
-    // style() {
-    //   //JUST ADDED SOME STYLING TO FIX THE SIZE ON THE IMAGE
-    //   //NOTICE THE STYLE METHOD IS CALLED IN THE INITIAIZATION METHOD
-    //   //I THINK I AM JUST GOING TO RENAME ALL THE INITIALIZATION STUFF TO DRAW
-    //     this.img.style.height = "100%";
-    //     this.img.style.width = "100%"
-    //     this.img.style.zIndex = "1"
-    // }
-    //NOT USING STYLE FUNCTION ^^^^^
-    //decided to keep all style in css file 
 }
 
 let imageArr = [];
@@ -79,6 +67,11 @@ for (let i = 1; i <= 20; i++) {
     //iterating through the image folder and setting the source to the random file aka i in this loop 
     imageArr.push(_src);
     //pushing the files to the array 
+}
+
+function fader() {
+    startBall.src = `./magic/magic8ball_start.png`;
+    startBall.imageChange();
 }
 
 form.addEventListener("submit", (event) => {
@@ -116,15 +109,4 @@ form.addEventListener("submit", (event) => {
     //once ask button clicked, the input feild returns to it's inital place holder 
     startBall.fadeTimeOut = setTimeout(fader, 3000);
     //storing the id of the timeout in fadeTimeOut
-
-
 });
-
-function fader() {
-    startBall.src = `./magic/magic8ball_start.png`;
-    startBall.imageChange();
-}
-
-
-
-
