@@ -21,9 +21,10 @@ By gathering all the elements from the HTML by their ID, a class was made to set
 # <img src="https://github.com/Grxcelynx/magic8ball/blob/main/ReadMeImages/class.png">
 # <img src="https://github.com/Grxcelynx/magic8ball/blob/main/ReadMeImages/loop.png">
 # <img src="https://github.com/Grxcelynx/magic8ball/blob/main/ReadMeImages/timer.png">
-Then creating helper functions and test cases for the form to ensure:
+Then from creating helper functions and test cases the form:
 # <img src="https://github.com/Grxcelynx/magic8ball/blob/main/ReadMeImages/form.png">
-* The images generate randomly: 
+This ensures:
+* The images generate randomly
 * A user ends their question with a question mark
 * A timer for the images to create the same effect of the orginal Magic 8 Ball
 
