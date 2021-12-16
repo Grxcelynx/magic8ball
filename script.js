@@ -86,13 +86,12 @@ form.addEventListener("submit", (event) => {
     // console.log("Working -> : ",isExisting)
     // console.log(inputElement.value)
     if (isExisting != true) {
-        alert("Please enter a question with a ? ");
+        alert("Please enter a question along with a \"?\" ");
         event.preventDefault();
         return;
     };
     //checking user's input to see if it ends in a question mark
 
-    
     // Form submission event to happen when user asks question 
     event.preventDefault();
     //cancels the event if it is cancelable - default action of event will not happen
