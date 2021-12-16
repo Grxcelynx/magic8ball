@@ -1,22 +1,8 @@
 const inputElement = document.getElementById("user-question");
 const form = document.getElementById("magic");
-// const button = document.getElementById("user-question");
 let magicball = document.getElementById("theball");
 
 
-// let question = '';
-// form.addEventListener("submit", (event)=> {
-//     event.preventDefault();
-//     // question = inputElement.value - acess option 1
-//     question = event.target[0].value
-//     // targeting form submit event belongs to
-//     // giving value of first index of form
-    
-//     console.log(question)
-// }
-// )
-
-// previous event listener ^
 
 function randomNumber(min, max) {
     //this function will help to produce a random photo
@@ -90,7 +76,7 @@ form.addEventListener("submit", (event) => {
         event.preventDefault();
         return;
     };
-    //checking user's input to see if it ends in a question mark
+    //^^checking user's input to see if it ends in a question mark
 
     // Form submission event to happen when user asks question 
     event.preventDefault();
