@@ -2,7 +2,7 @@
 
 This small game application replicates the functionality of the classic Magic 8 Ball toy. 
 
-# View and Interact
+## View and Interact
 https://grxcelynx.github.io/magic8ball/
 ## Contents 
 * [Tech Stack](#stack)
